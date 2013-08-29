@@ -25,10 +25,10 @@ abstract class modDZPhotoHelper
         }
         
         $ordering = $params->get('filter_order', 'a.created');
-        $model->setState($ordering);
+        $model->setState('list.ordering', $ordering);
         
         $direction = $params->get('filter_order_Dir', 'DESC');
-        $model->setState($direction);
+        $model->setState('list.direction', $direction);
         
         $limit = (int) $params->get('listlimit', 0);
         if ($limit) {
