@@ -11,4 +11,9 @@
 defined('_JEXEC') or die;
 ?>
 <div class="dzphoto-module<?php echo $moduleclass_sfx; ?>">
+<ul>
+    <?php foreach ($items as $item) : ?>
+    <li><a href="<?php echo $item->link; ?>" title="<?php echo $item->title; ?>"><?php echo $item->title; ?></a></li>
+    <?php endforeach; ?>
+</ul>
 </div>

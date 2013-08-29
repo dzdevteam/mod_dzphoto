@@ -15,5 +15,7 @@ require_once __DIR__ . '/helper.php';
 
 $moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'));
 
+$items = modDZPhotoHelper::getImages($params);
+
 // Display template
 require JModuleHelper::getLayoutPath('mod_dzphoto', $params->get('layout', 'default'));

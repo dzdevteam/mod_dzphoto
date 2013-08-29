@@ -30,6 +30,33 @@
     <config>
         <fields name="params">
             <fieldset name="basic">
+                <field
+                    name="filter_albumid" multiple="true"
+                    type="category" extension="com_dzphoto.images"
+                    label="MOD_DZPHOTO_REQUEST_LBL_FILTER_ALBUM_ID"
+                    description="MOD_DZPHOTO_REQUEST_DESC_FILTER_ALBUM_ID" />
+                <field
+                    name="filter_order"
+                    type="list" default="a.created"
+                    label="MOD_DZPHOTO_REQUEST_LBL_FILTER_ORDER"
+                    description="MOD_DZPHOTO_REQUEST_DESC_FILTER_ORDER">
+                    <option value="a.title">MOD_DZPHOTO_OPTION_TITLE</option>
+                    <option value="a.ordering">MOD_DZPHOTO_OPTION_ORDERING</option>
+                    <option value="a.created">MOD_DZPHOTO_OPTION_CREATED</option>
+                </field>
+                <field
+                    name="filter_order_Dir"
+                    type="list" default="DESC"
+                    label="MOD_DZPHOTO_REQUEST_LBL_FILTER_ORDER_DIR"
+                    description="MOD_DZPHOTO_REQUEST_DESC_FILTER_ORDER_DIR">
+                    <option value="ASC">JGLOBAL_ORDER_ASCENDING</option>
+                    <option value="DESC">JGLOBAL_ORDER_DESCENDING</option>
+                </field>
+                <field
+                    name="listlimit" class="validate-numeric"
+                    type="text" default="0" filter="int"
+                    label="MOD_DZPHOTO_REQUEST_LBL_LIST_LIMIT"
+                    description="MOD_DZPHOTO_REQUEST_DESC_LIST_LIMIT" />
             </fieldset>
             <fieldset name="advanced">
                 <field name="layout" type="modulelayout"
